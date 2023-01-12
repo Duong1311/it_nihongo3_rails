@@ -8,3 +8,8 @@
 
   <%= button_to "Destroy this book", @book, method: :delete %>
 </div>
+<p> 
+  <% if @book.image.attached?%>
+    <% image_tag @book.image%>
+    <% end %>
+</p>
