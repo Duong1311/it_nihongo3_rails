@@ -67,4 +67,6 @@ class BooksController < ApplicationController
     def book_params
       params.require(:book).permit(:title, :number_of_pages)
     end
+    before_action:set_book, only: [:show, :edit, :update, :destroy]
+    before_action:authenticate_user!
 end
